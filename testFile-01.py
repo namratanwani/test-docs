@@ -1,6 +1,17 @@
 def load_model(itos_filename, classifier_filename, num_classes):
 
     # load the int to string mapping file
+    """
+
+    Args:
+        itos_filename ():
+        classifier_filename ():
+        num_classes ():
+
+    Returns:
+        :
+
+    """
     itos = pickle.load(Path(itos_filename).open('rb'))
     # turn it into a string to int mapping (which is what we need)
     stoi = collections.defaultdict(lambda:0, {str(v):int(k) for k,v in enumerate(itos)})
